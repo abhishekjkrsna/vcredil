@@ -1,0 +1,84 @@
+{% extends '_base.html' %}
+{% block addl_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/about.css")}}">
+{% endblock %}
+
+{% block content %}
+<div class="main-section">
+    <div class="about">
+        <h3>What is VCredil?</h3>
+        <p>The VCredil App represents a transformative financial solution with a core focus on empowering rural communities. By harnessing alternative credit scores, this app redefines accessibility to financial services. Users can seamlessly apply for loans, create credit histories, and efficiently manage debt via an intuitive interface. At its heart is an innovative credit scoring model that integrates non-traditional data for heightened accuracy. Moreover, a comprehensive debt management system, inclusive of auto debit and payment reminders, enhances financial control. Beyond enhancing financial inclusivity, the app diligently educates users on responsible borrowing. The App's mission is to reshape rural finance, nurturing economic growth and stability.</p>
+        <p>Under the Mission Shakti Project, VCredil app extends support to women entrepreneurs by facilitating the financing of e-Rickshaws. These entrepreneurs can conveniently receive payments for their services through the app, where a portion of the earnings goes towards repaying the e-Rickshaw debt, while the remainder is credited to their wallets. This ingenious use of the auto debit feature empowers women to effectively manage debt, cultivate a formal credit history, and elevate their credit scores.</p>
+    </div>
+    <div class="features">
+        <h3>Features:</h3>
+        <ul>
+            <li>
+                <h4>Account Management:</h4>
+                <ul>
+                    <li>View account balances and transaction history.</li>
+                    <li>Monitor spending patterns and categorize transactions.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Payments and Transfers:</h4>
+                <ul>
+                    <li>Make UPI payments.</li>
+                    <li>Bill payments and utility payments.</li>
+                    <li>Set up recurring payments and scheduled transfers.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Mobile Wallet:</h4>
+                <ul>
+                    <li>Store digital versions of payment cards and loyalty cards.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Loans and Credit:</h4>
+                <ul>
+                    <li>Apply for personal loans, business loans, and credit lines.</li>
+                    <li>Check eligibility and interest rates.</li>
+                    <li>Monitor loan status and repayment schedule.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Budgeting and Financial Planning:</h4>
+                <ul>
+                    <li>Create budgets and track spending against them.</li>
+                    <li>Set financial goals and receive progress updates.</li>
+                    <li>Get insights into saving and spending habits.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Credit Monitoring:</h4>
+                <ul>
+                    <li>Monitor credit scores and receive alerts for changes.</li>
+                    <li>Access credit reports and history.</li>
+                    <li>Receive tips to improve credit health.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Security Features:</h4>
+                <ul>
+                    <li>Implement biometric authentication (fingerprint, facial recognition).</li>
+                    <li>Offer two-factor authentication for enhanced security.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Notifications and Alerts:</h4>
+                <ul>
+                    <li>Send transaction alerts, payment reminders, and account notifications.</li>
+                </ul>
+            </li>
+            <li>
+                <h4>Data Analytics and Insights:</h4>
+                <ul>
+                    <li>Provide personalized financial insights and trends.</li>
+                    <li>Analyse spending behaviour and offer suggestions for improvement.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

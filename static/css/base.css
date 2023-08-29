@@ -1,0 +1,146 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 100%;
+      
+    margin: 0;
+    line-height: 1.5;    
+}
+
+.errors {
+    color: red;
+}
+
+/* Header & Navigation Bar */
+header {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-image: linear-gradient(45deg,  #FFFFFF, #335C81);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    color: black;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center; /* Center the content horizontally */
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+}
+
+/* Main Section */
+
+
+/* Footer Section */
+/* Footer Styles */
+footer {
+    background-image: linear-gradient(45deg, #335C81, #FFFFFF);
+    padding: 40px 0;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    justify-content: center;
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.footer-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content li {
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: black;
+}
+
+.footer-content a:hover {
+    color: #f8a700;
+}
+
+.footer-link h4 {
+    padding: 0px 20px;
+    display: inline-flex;
+}
+
+

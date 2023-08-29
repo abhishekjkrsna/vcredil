@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% block addl_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/thanks.css")}}">
+{% endblock %}
+{% block content %}
+<div class="main-section">
+    <h1>Thanks, We will reply soon!!</h1>
+    <h3>We have received the following details:</h3>
+    <ul>
+        {% for key, value in data.items() %}
+            <li>{{ key | title() }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% block addl_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/form.css")}}">
+{% endblock %}
+{% block content %}
+<h2>KYC Form</h2>
+<form action="/kyc" method="post" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <div class="input">
+        {{ form.aadhar_front.label }}
+        {{ form.aadhar_front() }}        
+    </div>
+    <div class="input">
+        {{ form.aadhar_back.label }}
+        {{ form.aadhar_back() }}
+    </div>
+    <div class="input">
+        {{ form.pan.label }}
+        {{ form.pan() }}
+    </div>
+    <div class="input">
+        {{ form.submit() }}
+    </div>
+</form>
+{% endblock %}
+

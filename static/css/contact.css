@@ -1,0 +1,73 @@
+/* Styling for the main section */
+.main-section {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the heading */
+.main-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Styling for the form */
+.main-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for input fields and labels */
+.input {
+    margin-bottom: 20px;
+}
+
+.input label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input input[type="text"],
+.input textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Styling for mobile input */
+.input input[type="text"][name="mobile"] {
+    width: calc(100% - 20px); /* Adjust for mobile number input width */
+}
+
+/* Styling for the subject textarea */
+.input textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Styling for the submit button */
+.input input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input input[type="submit"]:hover {
+    background-color: #0056b3;
+}

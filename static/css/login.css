@@ -1,0 +1,54 @@
+/* Styling for the main section */
+.main-section {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the heading */
+.main-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for the form */
+.main-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for input fields and labels */
+.input {
+    margin-bottom: 15px;
+}
+
+.input label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+/* Styling for the submit button */
+.input input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/vcredil_icon.png')}}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css')}}">
+    {% block addl_css %}
+    {% endblock %}
+    <title>VCredil</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="{{ url_for('static', filename='images/vcredil_icon.png')}}" alt="vcredil icon">
+                <h1>VCredil</h1>
+            </a>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/score">Score</a>
+            <a href="/kyc">KYC</a>
+            <a href="/contact">Contact</a>            
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-content">
+                <h3>About</h3>
+                <p>The VCredil App represents a transformative financial solution with a core focus on empowering rural communities. By harnessing alternative credit scores, this app redefines accessibility to financial services. Users can seamlessly apply for loans, create credit histories, and efficiently manage debt via an intuitive interface.</p>                
+            </div>
+            <div class="footer-content">
+                <h3>Important Links</h3>
+                <ul>
+                    <li><a href="https://upmissionshakti.in/">Mission Shakti</a></li>
+                    <li><a href="https://upicon.in/">UPICON</a></li>
+                    <li><a href="https://www.upsdm.gov.in/">UPSDM</a></li>
+                    <li><a href="https://varionadvisors.com/">VAA</a></li>                    
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Site Links</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Helpline & Support</h3>
+                <ul>
+                    <li>Helpline:</li>
+                    <li>Phone Number:</li>
+                    <li>Email:</li>
+                    <li>Contact us:</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-link">
+                <h4>Designed & Developed by Varion Advisors Analytics (VAA)</h4>
+                <h4>Copyright &copy; 2023 VAA</h4>
+        </div>
+    </footer>    
+</body>
+</html>

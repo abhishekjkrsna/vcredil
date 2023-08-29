@@ -1,0 +1,108 @@
+{% extends '_base.html' %}
+{% block addl_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/home.css")}}">
+{% endblock %}
+
+{% block content %}
+<div class="main-section">
+    <div class="banner">
+        <img src="{{url_for("static", filename='images/banner-for-e-riksha.jpg')}}">
+    </div>
+    <div class="apply-form">
+        <h2>Register</h2>
+        <form action="/" method="POST">
+            {{ form.csrf_token }}
+            <div class="input">
+                {{ form.name.label }}
+                {{ form.name() }}
+                {% if form.name.errors %}
+                    <ul class="errors">
+                        {% for error in form.name.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.mobile.label }}
+                {{ form.mobile() }}
+                {% if form.mobile.errors %}
+                    <ul class="errors">
+                        {% for error in form.mobile.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.alternate_mobile.label }}
+                {{ form.alternate_mobile() }}
+                {% if form.alternate_mobile.errors %}
+                    <ul class="errors">
+                        {% for error in form.alternate_mobile.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.vehicle_number.label }}
+                {{ form.vehicle_number() }}
+                {% if form.vehicle_number.errors %}
+                    <ul class="errors">
+                        {% for error in form.vehicle_number.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.aadhar.label }}
+                {{ form.aadhar() }}
+                {% if form.aadhar.errors %}
+                    <ul class="errors">
+                        {% for error in form.aadhar.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.pan.label }}
+                {{ form.pan() }}
+                {% if form.pan.errors %}
+                    <ul class="errors">
+                        {% for error in form.pan.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.district.label }}
+                {{ form.district() }}
+                {% if form.district.errors %}
+                    <ul class="errors">
+                        {% for error in form.district.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.address.label }}
+                {{ form.address() }}
+                {% if form.address.errors %}
+                    <ul class="errors">
+                        {% for error in form.address.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">{{ form.submit() }}<input type="reset" value="reset"></div>
+            <di
+        </form>            
+    </div>
+</div>
+{% endblock %}
