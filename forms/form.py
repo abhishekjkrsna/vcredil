@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, SelectField, FileField
+from wtforms import StringField, SubmitField, TextAreaField, SelectField, FileField, IntegerRangeField
 from wtforms.validators import DataRequired, Length, Optional, Regexp, Email
 
 districts = {
@@ -90,6 +90,7 @@ class ApplyForm(FlaskForm):
     pan = StringField('Pan Number', validators=[DataRequired(message='Please fill the pan number'), Regexp(regex=r'^[A-Z]{5}[0-9]{4}[A-Z]{1}$', message='Incorrect PAN Number')],render_kw={"placeholder": "Eg: ABCDE1234A"})
     district = SelectField('District', choices=[(key, value) for key, value in districts.items()], validators=[DataRequired(message='Select the district')])
     address = TextAreaField('Enter address', validators=[DataRequired()], render_kw={"placeholder": "Eg: C/O, Ram Prasad, 10 mrjapur, Unnao, UP-209859"})
+    loan_required = IntegerRangeField('Loan Required:', validators=[DataRequired(message='Please select the loan amount')], render_kw={"placeholder": "Eg: 10000", "min": "10000", "max": "100000", "value":"20000","step": "5000", "id": "loan_required"})
     submit = SubmitField('Submit')
     
 class LoginForm(FlaskForm):

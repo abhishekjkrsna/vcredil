@@ -2,7 +2,9 @@
 {% block addl_css %}
 <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/home.css")}}">
 {% endblock %}
-
+{% block js %}
+<script type="text/javascript" src="{{ url_for("static", filename="js/home.js")}}" defer></script>
+{% endblock %}
 {% block content %}
 <div class="main-section">
     <div class="banner">
@@ -95,6 +97,17 @@
                 {% if form.address.errors %}
                     <ul class="errors">
                         {% for error in form.address.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="input">
+                {{ form.loan_required.label }} <span id="loan_value">&#8377; 5,000.00</span>
+                {{ form.loan_required() }}
+                {% if form.loan_required.errors %}
+                    <ul class="errors">
+                        {% for error in form.loan_required.errors %}
                             <li>{{ error }}</li>
                         {% endfor %}
                     </ul>
